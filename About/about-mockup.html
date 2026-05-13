@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About — Elisabeth S. Morgan (Mockup)</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
+:root {
+  --ink: #000; --muted: #555; --rule: #e6e6e6;
+  --accent: #0f7f7f; --ph: #f2f2f2; --ph-ink: #9a9a9a;
+}
+body { margin: 0; background: #fff; }
+.esm-home {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 300; font-size: 17px; line-height: 1.6;
+  color: var(--ink); background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+.esm-home * { box-sizing: border-box; }
+.esm-home .wrap { max-width: 1040px; margin: 0 auto; padding: 0 28px; }
+
+/* Page header */
+.esm-home .page-header { padding: 56px 0 24px; }
+.esm-home .page-header h1 {
+  font-family: Georgia, serif; font-weight: 400;
+  font-size: clamp(32px, 4.4vw, 44px); line-height: 1.2;
+  letter-spacing: -0.005em; color: var(--accent); margin: 0 0 8px;
+}
+.esm-home .page-header .tagline {
+  font-size: 14px; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted);
+}
+
+/* Bio */
+.esm-home .bio {
+  padding: 48px 0 64px;
+  display: grid; grid-template-columns: 260px 1fr; gap: 40px; align-items: start;
+}
+.esm-home .bio .photo {
+  background: var(--ph); color: var(--ph-ink);
+  width: 260px; aspect-ratio: 4/5;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase;
+  overflow: hidden;
+}
+.esm-home .bio .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.esm-home .bio h2 {
+  font-family: Georgia, serif; font-weight: 400;
+  font-size: clamp(24px, 3vw, 32px); line-height: 1.2;
+  letter-spacing: -0.01em; margin: 0 0 20px;
+}
+.esm-home .bio p { font-size: 17px; margin: 0 0 16px; }
+.esm-home .contact-line {
+  margin-top: 28px; font-size: 15px; color: var(--muted); line-height: 1.8;
+}
+.esm-home .contact-line a {
+  color: var(--ink); text-decoration: underline; text-underline-offset: 3px;
+}
+
+/* Sections */
+.esm-home section { padding: 64px 0; border-top: 1px solid var(--rule); }
+.esm-home .section-title {
+  font-family: Georgia, serif; font-weight: 400;
+  font-size: 30px; letter-spacing: -0.005em; margin: 0 0 32px;
+}
+
+/* Past Lives */
+.esm-home .role {
+  padding: 24px 0; border-bottom: 1px solid var(--rule);
+  display: flex; gap: 20px; align-items: flex-start;
+}
+.esm-home .role:last-of-type { border-bottom: none; }
+.esm-home .role-logo {
+  width: 56px; height: 56px; flex-shrink: 0;
+  background: var(--ph);
+}
+.esm-home .role-content h4 {
+  font-family: Georgia, serif; font-weight: 400;
+  font-size: 19px; margin: 0 0 8px;
+}
+.esm-home .role-content p { font-size: 16px; line-height: 1.55; margin: 0; }
+.esm-home .cv-link {
+  display: inline-block; margin-top: 28px;
+  font-family: Georgia, serif; font-size: 17px;
+  color: var(--ink); text-decoration: none;
+  border-bottom: 1px solid var(--ink); padding-bottom: 2px;
+}
+
+/* Education */
+.esm-home .edu-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px 28px;
+}
+.esm-home .edu-item { display: flex; align-items: center; gap: 16px; }
+.esm-home .edu-logo {
+  width: 48px; height: 48px; background: var(--ph); flex-shrink: 0;
+}
+.esm-home .edu-text { font-size: 15px; line-height: 1.4; }
+.esm-home .edu-text strong {
+  font-family: Georgia, serif; font-weight: 400;
+  font-size: 16px; display: block;
+}
+
+/* Contact */
+.esm-home .contact { padding: 80px 0 96px; }
+.esm-home .contact h3 {
+  font-family: Georgia, serif; font-weight: 400;
+  font-size: 32px; margin: 0 0 16px;
+}
+.esm-home .contact a {
+  font-family: Georgia, serif; font-size: 22px;
+  color: var(--accent); text-decoration: none;
+  border-bottom: 1px solid var(--accent); padding-bottom: 3px;
+}
+
+/* Footer */
+.esm-home footer {
+  padding: 32px 0 48px; border-top: 1px solid var(--rule);
+  font-size: 13px; color: var(--muted);
+  display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+}
+
+/* Mobile */
+@media (max-width: 680px) {
+  .esm-home .bio { grid-template-columns: 1fr; gap: 28px; padding: 24px 0 48px; }
+  .esm-home .edu-grid { grid-template-columns: 1fr; gap: 28px; }
+  .esm-home section { padding: 48px 0; }
+  .esm-home .contact { padding: 56px 0 72px; }
+}
+</style>
+</head>
+<body>
+<div class="esm-home">
+<div class="wrap">
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <h1>About Elisabeth</h1>
+  </div>
+
+  <!-- FULL BIO + PHOTO -->
+  <div class="bio">
+    <div class="photo">
+      <img src="https://i0.wp.com/elisabethsmorgan.com/wp-content/uploads/2026/04/e-morgan-new-photo-coming-soon.png?w=1200&amp;ssl=1" alt="Elisabeth S. Morgan">
+    </div>
+    <div class="bio-copy">
+      <h2>Hi, I'm Elisabeth.</h2>
+      <p>For over a decade, I've helped founders, small businesses, and mission-driven organizations get found online, build real audiences, and grow through marketing that prizes curiosity, education, and generosity.</p>
+      <p>I believe the best marketing is always your work itself, but having the digital infrastructure in place to show it off can meaningfully amplify your impact &amp; growth.</p>
+      <p>I'm based in Princeton, NJ, where I work with a small roster of clients across mental health, education, and arts &amp; design.</p>
+      <div class="contact-line">
+        📧 &nbsp;<a href="mailto:elisabethsmorgan@gmail.com">elisabethsmorgan@gmail.com</a><br>
+        📍 &nbsp;Princeton, NJ
+      </div>
+    </div>
+  </div>
+
+  <!-- PAST LIVES -->
+  <section>
+    <h3 class="section-title">Past Lives</h3>
+    <div class="role">
+      <div class="role-logo"></div>
+      <div class="role-content">
+        <h4>Senior Marketing Manager at The Dorm</h4>
+        <p>Owned email, educational webinar, and management workflows that helped our organization mark itself as a leader in specialized mental healthcare.</p>
+      </div>
+    </div>
+    <div class="role">
+      <div class="role-logo"></div>
+      <div class="role-content">
+        <h4>Marketing Manager at Tattly Temporary Tattoos</h4>
+        <p>Led new initiatives in paid media and strategic partnerships with DonorsChoose &amp; Society6. Had the opportunity to learn from Swiss-miss, her creative, entrepreneurial teams, and participate in Growclass.</p>
+      </div>
+    </div>
+    <div class="role">
+      <div class="role-logo"></div>
+      <div class="role-content">
+        <h4>Content &amp; Community Manager at Kids Discover</h4>
+        <p>Helped digitize and expand the online presence of a legacy non-fiction library for kids. Grew a community of educators and education bloggers, driving email subscriptions and increasing library sales.</p>
+      </div>
+    </div>
+    <div class="role">
+      <div class="role-logo" style="visibility:hidden;"></div>
+      <div class="role-content">
+        <h4>Writer &amp; Educator</h4>
+        <p>Before moving into digital media and marketing, I was an assistant teacher at The International School of Louisiana and Teacher's Assistantship Program in France. I also blogged at Nola Kiosk, and wrote for several cultural publications including NolaVie and NolaDefender.</p>
+      </div>
+    </div>
+    <a class="cv-link" href="https://elisabethsmorgan.com/wp-content/uploads/2026/04/2026-Elisabeth-Morgan-Resume.pdf">› Download Resume</a>
+  </section>
+
+  <!-- EDUCATION -->
+  <section>
+    <h3 class="section-title">Education &amp; Training</h3>
+    <div class="edu-grid">
+      <div class="edu-item"><div class="edu-logo"></div><div class="edu-text"><strong>Columbia University</strong>M.S. Journalism</div></div>
+      <div class="edu-item"><div class="edu-logo"></div><div class="edu-text"><strong>Tulane University</strong>B.A. English, French, Art History</div></div>
+      <div class="edu-item"><div class="edu-logo"></div><div class="edu-text"><strong>IES Abroad, Paris</strong>French &amp; Art History</div></div>
+      <div class="edu-item"><div class="edu-logo"></div><div class="edu-text"><strong>Mailchimp</strong>Certified</div></div>
+      <div class="edu-item"><div class="edu-logo"></div><div class="edu-text"><strong>Anthropic</strong>AI Fluency, AI 101, AI For Non-Profits</div></div>
+      <div class="edu-item"><div class="edu-logo"></div><div class="edu-text"><strong>Coursera</strong>SEO Fluency</div></div>
+      <div class="edu-item"><div class="edu-logo"></div><div class="edu-text"><strong>Sarah Stockdale</strong>Growth Marketing Consultation</div></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact">
+    <h3>Get in Touch</h3>
+    <p><a href="mailto:elisabethsmorgan@gmail.com">elisabethsmorgan@gmail.com</a></p>
+  </section>
+
+  <footer>
+    <span>© 2026 Elisabeth S. Morgan</span>
+    <span>Princeton, NJ</span>
+  </footer>
+
+</div>
+</div>
+</body>
+</html>

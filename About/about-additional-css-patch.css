@@ -1,0 +1,37 @@
+/* ===== About page — append to Customizer Additional CSS ===== */
+
+.esm-home .page-header { padding: 56px 0 24px; }
+.esm-home .page-header .page-title {
+  font-family: 'Faune', Georgia, serif; font-weight: 400;
+  font-size: clamp(32px, 4.4vw, 44px); line-height: 1.2;
+  letter-spacing: -0.005em; color: var(--accent); margin: 0;
+}
+
+.esm-home .bio {
+  padding: 32px 0 56px;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+.esm-home .bio .photo {
+  width: 240px;
+  aspect-ratio: 4/5;
+  background: var(--ph); color: var(--ph-ink);
+  overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+}
+.esm-home .bio .photo img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+.esm-home .bio h2 {
+  font-family: 'Faune', Georgia, serif; font-weight: 400;
+  font-size: clamp(24px, 3vw, 32px); line-height: 1.2;
+  letter-spacing: -0.01em; margin: 0 0 20px;
+}
+.esm-home .bio p { font-size: 17px; margin: 0 0 16px; }
+
+@media (max-width: 680px) {
+  .esm-home .bio { grid-template-columns: 1fr; gap: 24px; }
+  .esm-home .bio .photo { width: 200px; }
+}

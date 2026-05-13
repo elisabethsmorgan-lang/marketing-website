@@ -1,0 +1,612 @@
+/* ═══════════════════════════════════════════════════════════
+   Elisabeth S. Morgan — MASTER Additional CSS
+   WordPress › Appearance › Customize › Additional CSS
+   THIS IS THE ONLY FILE. Paste the full contents here.
+   All pages (Home, About, Contact, Portfolio) are included.
+   ═══════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
+@font-face {
+  font-family: 'Faune';
+  src: url('/wp-content/uploads/fonts/Faune-TextRegular.otf') format('opentype');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Faune';
+  src: url('/wp-content/uploads/fonts/Faune-TextItalic.otf') format('opentype');
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'Faune';
+  src: url('/wp-content/uploads/fonts/Faune-TextBold.otf') format('opentype');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+
+/* Hide the WP page title on the homepage (front page) */
+body.home .entry-title,
+body.home .ast-page-header-section { display: none !important; }
+
+/* Constrain site header width to match page content */
+.main-header-bar-wrap .main-header-bar .ast-container,
+#masthead .ast-container,
+.site-header .ast-container { max-width: 1040px !important; }
+
+/* Astra site header — site title in Faune, nav in Inter */
+.site-title,
+.site-title a,
+.ast-site-identity .site-title a {
+  font-family: 'Faune', Georgia, serif !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.005em;
+}
+.main-header-menu a,
+.ast-primary-menu a,
+#ast-desktop-header .menu-link,
+#ast-mobile-header .menu-link {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.01em;
+}
+
+/* Page wrapper */
+.esm-home {
+  --ink: #000; --muted: #555; --rule: #e6e6e6;
+  --accent: #0f7f7f; --ph: #f2f2f2; --ph-ink: #9a9a9a;
+  --teal-dark: #0A5C5C;
+  --teal: #0F7F7F;
+  --teal-light: #B8DCDC;
+  --teal-tint: #E8F5F5;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 300; font-size: 17px; line-height: 1.6;
+  color: var(--ink); background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+.esm-home * { box-sizing: border-box; }
+.esm-home .wrap { max-width: 1040px; margin: 0 auto; padding: 0 28px; }
+
+/* Brand */
+.esm-home .brand { padding: 56px 0 32px; }
+.esm-home .site-title {
+  font-family: 'Faune', Georgia, serif; font-weight: 400;
+  font-size: clamp(28px, 4vw, 38px); line-height: 1.2;
+  letter-spacing: -0.005em; color: var(--accent); margin-bottom: 8px;
+}
+.esm-home .tagline {
+  font-size: 14px; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted);
+}
+
+/* Hero */
+.esm-home .hero {
+  padding: 48px 0 72px; display: grid;
+  grid-template-columns: 1fr 1.2fr; gap: 48px; align-items: start;
+}
+.esm-home .photo {
+  background: var(--ph); color: var(--ph-ink);
+  aspect-ratio: 4/5; display: flex; align-items: center; justify-content: center;
+  font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase;
+}
+.esm-home .hero h2 {
+  font-family: 'Faune', Georgia, serif; font-weight: 400;
+  font-size: clamp(28px, 3.6vw, 40px); line-height: 1.2;
+  letter-spacing: -0.01em; margin-bottom: 24px;
+}
+.esm-home .hero p { font-size: 17px; margin-bottom: 16px; }
+.esm-home .contact-line {
+  margin-top: 28px; font-size: 15px; color: var(--muted); line-height: 1.8;
+}
+.esm-home .contact-line a {
+  color: var(--ink); text-decoration: underline; text-underline-offset: 3px;
+}
+/* Button group in bio — flex column for stacked CTAs */
+.esm-home .bio .contact-line {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 12px;
+  font-size: inherit; color: inherit; line-height: inherit;
+}
+
+/* ── BUTTONS ── */
+.esm-home .ast-button,
+.esm-home .ast-outline-button {
+  display: inline-block;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 14px 28px;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  line-height: 1;
+}
+
+/* Primary */
+.esm-home .ast-button {
+  background: var(--teal-dark);
+  color: #ffffff;
+  border-color: var(--teal-dark);
+}
+.esm-home .ast-button:hover {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: #ffffff;
+}
+.esm-home .ast-button:active {
+  background: var(--teal-light);
+  border-color: var(--teal-light);
+  color: var(--teal-dark);
+}
+
+/* Secondary */
+.esm-home .ast-outline-button {
+  background: #ffffff;
+  color: var(--teal);
+  border-color: var(--teal);
+}
+.esm-home .ast-outline-button:hover {
+  background: var(--teal-tint);
+  color: var(--teal);
+  border-color: var(--teal);
+}
+.esm-home .ast-outline-button:active {
+  background: var(--teal-light);
+  border-color: var(--teal-light);
+  color: var(--teal-dark);
+}
+
+/* Sections */
+.esm-home section { padding: 72px 0; border-top: 1px solid var(--rule); }
+.esm-home .section-title {
+  font-family: 'Faune', Georgia, serif; font-weight: 400;
+  font-size: 30px; letter-spacing: -0.005em; margin-bottom: 36px;
+}
+
+/* Services graphic */
+.esm-home .services-graphic { margin: 0 0 40px; }
+.esm-home .services-graphic img { width: 100%; height: auto; display: block; border-radius: 8px; }
+
+/* Services */
+.esm-home .services {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px 40px;
+}
+.esm-home .service h4 {
+  font-family: 'Faune', Georgia, serif; font-weight: 400;
+  font-size: 20px; margin-bottom: 10px; color: var(--accent);
+}
+.esm-home .service p { font-size: 16px; line-height: 1.55; }
+
+/* Past Lives */
+.esm-home .role {
+  padding: 24px 0; border-bottom: 1px solid var(--rule);
+  display: flex; gap: 20px; align-items: flex-start;
+}
+.esm-home .role:last-of-type { border-bottom: none; }
+.esm-home .role-logo {
+  width: 56px; height: 56px; flex-shrink: 0;
+  background: var(--ph); display: flex; align-items: center; justify-content: center;
+}
+.esm-home .role-logo:has(img) { background: transparent; }
+.esm-home .role-logo img { width: 56px; height: 56px; object-fit: contain; display: block; }
+.esm-home .role-content { flex: 1; }
+.esm-home .role h4,
+.esm-home .role-content h4 {
+  font-family: 'Faune', Georgia, serif; font-weight: 400;
+  font-size: 19px; margin-bottom: 8px;
+}
+.esm-home .role p,
+.esm-home .role-content p { font-size: 16px; line-height: 1.55; }
+.esm-home .cv-link {
+  display: inline-block; margin-top: 28px;
+  font-family: 'Faune', Georgia, serif; font-size: 17px;
+  color: var(--ink); text-decoration: none;
+  border-bottom: 1px solid var(--ink); padding-bottom: 2px;
+}
+
+/* Education */
+.esm-home .edu-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px 28px;
+}
+.esm-home .edu-item { display: flex; align-items: center; gap: 16px; }
+.esm-home .edu-logo {
+  width: 48px; height: 48px; background: var(--ph); color: var(--ph-ink);
+  font-size: 9px; letter-spacing: 0.1em; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.esm-home .edu-logo:has(img) { background: transparent; }
+.esm-home .edu-logo img { width: 48px; height: 48px; object-fit: contain; display: block; }
+.esm-home .edu-text { font-size: 15px; line-height: 1.4; }
+.esm-home .edu-text strong {
+  font-family: 'Faune', Georgia, serif; font-weight: 400;
+  font-size: 16px; display: block;
+}
+
+/* Contact */
+.esm-home .contact { padding: 96px 0 120px; }
+.esm-home .contact h3 {
+  font-family: 'Faune', Georgia, serif; font-weight: 400;
+  font-size: 32px; margin-bottom: 16px;
+}
+.esm-home .contact a {
+  font-family: 'Faune', Georgia, serif; font-size: 22px;
+  color: var(--accent); text-decoration: none;
+  border-bottom: 1px solid var(--accent); padding-bottom: 3px;
+}
+
+/* Footer */
+.esm-home footer {
+  padding: 32px 0 48px; border-top: 1px solid var(--rule);
+  font-size: 13px; color: var(--muted);
+  display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+}
+
+/* About page — bio layout */
+.esm-home .page-header { padding: 56px 0 24px; }
+.esm-home .page-header .page-title {
+  font-family: 'Faune', Georgia, serif; font-weight: 400;
+  font-size: clamp(32px, 4.4vw, 44px); line-height: 1.2;
+  letter-spacing: -0.005em; color: var(--accent); margin: 0;
+}
+.esm-home .bio {
+  padding: 32px 0 56px; display: grid;
+  grid-template-columns: 240px 1fr; gap: 40px; align-items: start;
+}
+.esm-home .bio .photo {
+  width: 240px; aspect-ratio: 4/5;
+  background: var(--ph); color: var(--ph-ink);
+  overflow: hidden; display: flex; align-items: center; justify-content: center;
+}
+.esm-home .bio .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.esm-home .bio h2 {
+  font-family: 'Faune', Georgia, serif; font-weight: 400;
+  font-size: clamp(24px, 3vw, 32px); line-height: 1.2;
+  letter-spacing: -0.01em; margin: 0 0 20px;
+}
+.esm-home .bio p { font-size: 17px; margin: 0 0 16px; }
+
+/* ── PORTFOLIO / WORK PAGE ── */
+.esm-work {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 300; font-size: 17px; line-height: 1.6;
+  color: #000; background: #fff; max-width: 760px; margin: 0 auto; padding: 0 28px;
+}
+.esm-work * { box-sizing: border-box; margin: 0; padding: 0; }
+.esm-work-hero { padding: 64px 0 72px; border-bottom: 1px solid #e6e6e6; }
+.esm-nav-label {
+  font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: #888; display: block; margin-bottom: 18px;
+}
+.esm-work-hero h1 {
+  font-family: 'Faune', Georgia, serif; font-weight: 400;
+  font-size: clamp(28px, 3.6vw, 40px); line-height: 1.2;
+  letter-spacing: -0.01em; margin-bottom: 20px; color: #000;
+}
+.esm-work-hero p { font-size: 17px; line-height: 1.65; color: #555; max-width: 560px; }
+.esm-work-list { padding: 48px 0; border-bottom: 1px solid #e6e6e6; }
+.esm-work-group { margin-bottom: 52px; }
+.esm-work-group:last-child { margin-bottom: 0; }
+.esm-work-sector {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: #C15F3C; margin-bottom: 16px;
+}
+.esm-work-sector::before {
+  content: ''; display: inline-block; width: 16px; height: 1px;
+  background: #C15F3C; flex-shrink: 0;
+}
+.esm-work-card { border: 0.5px solid #e6e6e6; background: #fff; }
+.esm-img-placeholder {
+  width: 100%; height: 220px; background: #f5f5f5;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: #aaa; border-bottom: 0.5px solid #e6e6e6;
+  position: relative; overflow: hidden;
+}
+.esm-img-placeholder::after {
+  content: ''; position: absolute; top: 0; left: 0;
+  width: 3px; height: 100%; background: #C15F3C;
+}
+.esm-img-placeholder img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+.esm-card-body { padding: 24px 28px 28px; }
+.esm-work-tag { display: block; font-size: 12px; color: #999; margin-bottom: 10px; letter-spacing: 0.02em; }
+.esm-work-card h4 {
+  font-family: 'Faune', Georgia, serif; font-weight: 400;
+  font-size: 20px; color: #000; margin-bottom: 10px; line-height: 1.25;
+}
+.esm-work-card p { font-size: 16px; line-height: 1.6; color: #555; margin-bottom: 16px; }
+.esm-work-link { font-size: 15px; color: #000; text-decoration: underline; text-underline-offset: 3px; }
+.esm-work-cta { padding: 72px 0 96px; }
+.esm-work-cta h2 {
+  font-family: 'Faune', Georgia, serif; font-weight: 400;
+  font-size: 30px; letter-spacing: -0.005em; margin-bottom: 14px; color: #000;
+}
+.esm-work-cta p { font-size: 16px; color: #555; max-width: 440px; line-height: 1.65; margin-bottom: 28px; }
+.esm-work-cta-links { display: flex; gap: 28px; flex-wrap: wrap; }
+.esm-work-cta a {
+  font-family: 'Faune', Georgia, serif; font-size: 17px;
+  color: #C15F3C; text-decoration: none;
+  border-bottom: 1px solid #C15F3C; padding-bottom: 2px;
+}
+@media (max-width: 600px) {
+  .esm-work { padding: 0 20px; }
+  .esm-work-hero { padding: 48px 0 56px; }
+  .esm-img-placeholder { height: 160px; }
+  .esm-card-body { padding: 20px 20px 24px; }
+}
+
+/* ── CONTACT PAGE ── */
+.esm-home .contact-intro { padding: 32px 0 40px; max-width: 720px; }
+.esm-home .contact-intro p { font-size: 17px; margin: 0 0 16px; }
+.esm-home .contact-intro .contact-line { margin-top: 24px; font-size: 16px; line-height: 1.7; }
+
+.esm-home .jetpack-contact-form-container,
+.entry-content .jetpack-contact-form-container { margin: 16px 0 56px; font-family: inherit; }
+
+.esm-home .contact-form label,
+.entry-content .contact-form label {
+  font-family: inherit; font-size: 14px; font-weight: 600;
+  letter-spacing: 0.02em; text-transform: uppercase; color: var(--ink, #1a1a1a);
+}
+.esm-home .contact-form input[type="text"],
+.esm-home .contact-form input[type="email"],
+.esm-home .contact-form textarea,
+.entry-content .contact-form input[type="text"],
+.entry-content .contact-form input[type="email"],
+.entry-content .contact-form textarea {
+  font-family: inherit; font-size: 16px; border: 1px solid #d6d2cc;
+  border-radius: 0; background: #fafaf7; padding: 12px 14px; width: 100%; box-shadow: none;
+}
+.esm-home .contact-form input:focus,
+.esm-home .contact-form textarea:focus,
+.entry-content .contact-form input:focus,
+.entry-content .contact-form textarea:focus {
+  outline: none; border-color: var(--accent); background: #fff;
+}
+.esm-home .contact-form button[type="submit"],
+.entry-content .contact-form button[type="submit"],
+.esm-home .contact-form .wp-block-jetpack-button button,
+.entry-content .contact-form .wp-block-jetpack-button button {
+  font-family: 'Faune', Georgia, serif; font-size: 17px; font-weight: 400;
+  letter-spacing: 0; background: var(--accent); color: #fff;
+  border: none; border-radius: 0; padding: 12px 28px; cursor: pointer; transition: opacity 0.15s ease;
+}
+.esm-home .contact-form button[type="submit"]:hover,
+.entry-content .contact-form button[type="submit"]:hover { opacity: 0.85; }
+
+/* About section on homepage — side-by-side layout with constrained headshot */
+.esm-home .about {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 40px;
+  align-items: start;
+  padding: 32px 0 56px;
+}
+.esm-home .about .photo {
+  width: 240px;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  background: var(--ph);
+}
+.esm-home .about .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.esm-home .about-copy h2 {
+  font-family: 'Faune', Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 0 0 20px;
+}
+.esm-home .about-copy p { font-size: 17px; margin: 0 0 16px; }
+.esm-home .about-copy .contact-line { margin-top: 24px; font-size: 15px; color: var(--muted); line-height: 1.8; }
+.esm-home .about-copy .contact-line a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+
+/* Mobile */
+@media (max-width: 680px) {
+  .esm-home .hero { grid-template-columns: 1fr; gap: 28px; padding: 24px 0 48px; }
+  .esm-home .bio { grid-template-columns: 1fr; gap: 24px; }
+  .esm-home .bio .photo { width: 200px; }
+  .esm-home .about { grid-template-columns: 1fr; gap: 24px; }
+  .esm-home .about .photo { width: 200px; }
+  .esm-home .services, .esm-home .edu-grid { grid-template-columns: 1fr; gap: 28px; }
+  .esm-home section { padding: 48px 0; }
+  .esm-home .contact { padding: 64px 0 80px; }
+}
+
+
+/* ══════════════════════════════════════════════════════
+   MAA CASE STUDY — .esm-maa
+   ══════════════════════════════════════════════════════ */
+.esm-maa {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #000000;
+  background: #ffffff;
+}
+.esm-maa *, .esm-maa *::before, .esm-maa *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.esm-maa-wrap {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+.esm-maa-hero {
+  padding: 72px 0 56px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.esm-maa-label {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #555555;
+  margin-bottom: 20px;
+}
+.esm-maa-hero h1 {
+  font-family: 'Faune', Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  max-width: 720px;
+  margin-bottom: 36px;
+  color: #000000;
+}
+.esm-maa-meta {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.esm-maa-meta-item strong {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #555555;
+  margin-bottom: 3px;
+  font-weight: 500;
+}
+.esm-maa-meta-item span { font-size: 15px; color: #000000; }
+.esm-maa-content {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 28px 120px;
+}
+.esm-maa section {
+  padding: 64px 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+.esm-maa section:last-of-type { border-bottom: none; }
+.esm-maa h2 {
+  font-family: 'Faune', Georgia, serif;
+  font-weight: 400;
+  font-size: 28px;
+  letter-spacing: -0.005em;
+  margin-bottom: 28px;
+  color: #000000;
+}
+.esm-maa h3 {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0f7f7f;
+  font-weight: 500;
+  margin: 32px 0 14px;
+}
+.esm-maa h3:first-of-type { margin-top: 0; }
+.esm-maa p { color: #555555; margin-bottom: 16px; font-size: 17px; }
+
+/* Context grid */
+.esm-maa-context-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: #e6e6e6;
+  margin-top: 36px;
+}
+.esm-maa-context-card { background: #ffffff; padding: 28px 32px; }
+.esm-maa-context-card h3 { margin-top: 0; }
+.esm-maa-context-card ul { list-style: none; padding: 0; }
+.esm-maa-context-card ul li {
+  font-size: 15px; color: #555555;
+  padding: 9px 0 9px 16px;
+  border-bottom: 1px solid #e6e6e6;
+  position: relative;
+}
+.esm-maa-context-card ul li:last-child { border-bottom: none; }
+.esm-maa-context-card ul li::before { content: '—'; position: absolute; left: 0; color: #0f7f7f; }
+
+/* Work list */
+.esm-maa-work-list { list-style: none; padding: 0; }
+.esm-maa-work-list li {
+  font-size: 16px; color: #555555;
+  padding: 11px 0 11px 18px;
+  border-bottom: 1px solid #e6e6e6;
+  position: relative;
+}
+.esm-maa-work-list li:last-child { border-bottom: none; }
+.esm-maa-work-list li::before { content: '—'; position: absolute; left: 0; color: #0f7f7f; }
+
+/* Before/after panels */
+.esm-maa-before-after {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: #e6e6e6;
+  margin: 40px 0;
+}
+.esm-maa-ba-panel { background: #ffffff; overflow: hidden; }
+.esm-maa-ba-label {
+  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: #555555; padding: 14px 20px; background: #f2f2f2;
+  border-bottom: 1px solid #e6e6e6; font-weight: 500;
+}
+.esm-maa-ba-panel img { width: 100%; display: block; }
+.esm-maa-ba-caption {
+  font-size: 13px; color: #555555; padding: 14px 20px;
+  border-top: 1px solid #e6e6e6; font-style: italic; line-height: 1.5;
+}
+
+/* Messaging comparison table */
+.esm-maa-compare-table { width: 100%; border-collapse: collapse; margin-top: 32px; font-size: 15px; }
+.esm-maa-compare-table th {
+  font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  font-weight: 500; color: #555555; padding: 12px 16px;
+  background: #f2f2f2; border: 1px solid #e6e6e6; text-align: left;
+}
+.esm-maa-compare-table td {
+  padding: 14px 16px; border: 1px solid #e6e6e6;
+  color: #555555; vertical-align: top; line-height: 1.5;
+}
+.esm-maa-old { color: #999999; text-decoration: line-through; text-decoration-color: #cccccc; }
+.esm-maa-new { color: #000000; }
+
+/* Takeaways */
+.esm-maa-takeaway {
+  display: flex; gap: 24px; padding: 24px 0;
+  border-bottom: 1px solid #e6e6e6; align-items: flex-start;
+}
+.esm-maa-takeaway:last-of-type { border-bottom: none; }
+.esm-maa-takeaway-num {
+  font-family: 'Faune', Georgia, serif;
+  font-size: 2rem; color: #e6e6e6; line-height: 1; flex-shrink: 0; width: 32px;
+}
+.esm-maa-takeaway p { margin: 0; color: #555555; }
+
+/* CTA */
+.esm-maa-cta { padding: 80px 0 0; }
+.esm-maa-cta h2 {
+  font-family: 'Faune', Georgia, serif; font-weight: 400;
+  font-size: 30px; margin-bottom: 16px; color: #000000;
+}
+.esm-maa-cta p { font-size: 17px; color: #555555; margin-bottom: 32px; max-width: 500px; }
+.esm-maa-btn-group { display: flex; gap: 16px; flex-wrap: wrap; }
+.esm-maa-btn {
+  display: inline-block; padding: 13px 28px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 13px; font-weight: 500; letter-spacing: 0.04em;
+  text-decoration: none; cursor: pointer; border: 1px solid #C15F3C;
+}
+.esm-maa-btn-primary { background: #C15F3C; color: #ffffff; }
+.esm-maa-btn-primary:hover { background: #a84f30; }
+.esm-maa-btn-secondary { background: transparent; color: #C15F3C; }
+.esm-maa-btn-secondary:hover { background: #C15F3C; color: #ffffff; }
+
+@media (max-width: 680px) {
+  .esm-maa-context-grid,
+  .esm-maa-before-after { grid-template-columns: 1fr; }
+  .esm-maa-hero { padding: 48px 0 40px; }
+  .esm-maa-meta { gap: 24px; }
+}
